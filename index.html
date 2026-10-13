@@ -268,6 +268,12 @@ main{padding-bottom:84px}
   th,td{padding:6px 7px}
 }
 
+.idx{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:12px;margin:14px 0}
+.idx a{display:block;background:var(--white);border:1px solid var(--g200);border-left:4px solid var(--blue);border-radius:var(--r);padding:12px 14px;text-decoration:none}
+.idx a:hover{border-color:var(--blue);background:var(--blue-wash)}
+.idx a>b{display:block;color:var(--navy);font-size:14.5px;margin-bottom:3px}
+.idx a>span{display:block;font-size:13.5px;color:var(--g600)}
+
 /* ============ agregados de esta página ============ */
 
 /* acento circunflejo para p̂ y q̂ */
@@ -467,7 +473,7 @@ a.lnk:hover{color:var(--navy)}
 <p>La media de esos cinco números es:</p>
 <div class="calc" data-t="\b{x} = \f{1 + 0 + 1 + 1 + 0}{5} = \f{3}{5} = 0,6"></div>
 <p>Que es exactamente la proporción de unos. Entonces:</p><div class="box def"><div class="lbl">La idea central</div>
-<p>Una proporción es la media de una variable que solo vale 0 o 1. Todo lo que vale para medias vale para proporciones, y en particular el <strong>teorema central del límite</strong> (el de la parte 1, «Intervalos de confianza para la media»: con muestras grandes, la media muestral se distribuye aproximadamente normal aunque la población no lo sea). Con una muestra suficientemente grande, <span class="mi" data-t="\h{p}"></span> se distribuye de forma aproximadamente normal alrededor de <span class="mi" data-t="p"></span>.</p></div>
+<p>Una proporción es la media de una variable que solo vale 0 o 1. Todo lo que vale para medias vale para proporciones, y en particular el <strong>teorema central del límite</strong> (el de la parte 1, <a class="ext" href="https://iamatematica.github.io/Intervalos-de-confianza-para-la-media-Ejercicios-Probabilidad/" target="_blank" rel="noopener">«Intervalos de confianza para la media»</a>: con muestras grandes, la media muestral se distribuye aproximadamente normal aunque la población no lo sea). Con una muestra suficientemente grande, <span class="mi" data-t="\h{p}"></span> se distribuye de forma aproximadamente normal alrededor de <span class="mi" data-t="p"></span>.</p></div>
 <p>Por eso el intervalo tiene la misma forma que siempre:</p>
 <div class="calc" data-t="\o{estimación} ± \o{valor crítico} · \o{error estándar}"></div>
 <p>Lo único que falta es el error estándar de una proporción.</p></section><section class="card"><h3><span class="n">2.3</span>El error estándar de una proporción</h3>
@@ -663,7 +669,7 @@ qchisq(0.975, 9)
   <div class="arb-r">
     <div class="arb-o">
       <b>De la población: es <span class="mi" data-t="σ"></span></b>
-      <span>«se sabe que <span class="mi" data-t="σ"></span> es…», «la desviación de la población es…». Se usa <span class="mi" data-t="z"></span>: es el procedimiento de la parte 1, «Intervalos de confianza para la media». El margen se arma con el valor <span class="mi" data-t="z"></span> crítico y el error estándar <span class="mi" data-t="\f{σ}{\r{n}}"></span>.</span></div>
+      <span>«se sabe que <span class="mi" data-t="σ"></span> es…», «la desviación de la población es…». Se usa <span class="mi" data-t="z"></span>: es el procedimiento de la parte 1, <a class="ext" href="https://iamatematica.github.io/Intervalos-de-confianza-para-la-media-Ejercicios-Probabilidad/" target="_blank" rel="noopener">«Intervalos de confianza para la media»</a>. El margen se arma con el valor <span class="mi" data-t="z"></span> crítico y el error estándar <span class="mi" data-t="\f{σ}{\r{n}}"></span>.</span></div>
     <button class="arb-o go am" data-go="t1">
       <b>De la muestra, o hay que calcularlo: es <span class="mi" data-t="s"></span></b>
       <span>«la muestra tiene un desvío de…», o dan la lista de datos. El margen se arma con el valor t crítico y el error estándar estimado <span class="mi" data-t="\f{s}{\r{n}}"></span>.</span></button>
